@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06671A76A4B31AC2A547007D /* Pods_KaminoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E0F0EBA1AC4EB9B3FB5CA4 /* Pods_KaminoUITests.framework */; };
+		27C62785D9034088280AAC57 /* Pods_KaminoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5E8C5E72596764EFCC345BF /* Pods_KaminoTests.framework */; };
+		7B0E70EF2253936900B85BE7 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0E70EE2253936900B85BE7 /* Services.swift */; };
+		7B0E70F122539FC500B85BE7 /* ResidentInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0E70F022539FC500B85BE7 /* ResidentInfoViewController.swift */; };
+		7B0E70F32253A65700B85BE7 /* IBDesignables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0E70F22253A65700B85BE7 /* IBDesignables.swift */; };
+		7B0E70F52253A70600B85BE7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0E70F42253A70600B85BE7 /* Extensions.swift */; };
 		7B2CA8AE225364730077C359 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2CA8AD225364730077C359 /* AppDelegate.swift */; };
 		7B2CA8B0225364730077C359 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2CA8AF225364730077C359 /* ViewController.swift */; };
 		7B2CA8B3225364730077C359 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B2CA8B1225364730077C359 /* Main.storyboard */; };
@@ -15,6 +21,8 @@
 		7B2CA8BB225364750077C359 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B2CA8B9225364750077C359 /* LaunchScreen.storyboard */; };
 		7B2CA8C6225364750077C359 /* KaminoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2CA8C5225364750077C359 /* KaminoTests.swift */; };
 		7B2CA8D1225364750077C359 /* KaminoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2CA8D0225364750077C359 /* KaminoUITests.swift */; };
+		7B2CA8E3225376260077C359 /* ResidentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2CA8E2225376260077C359 /* ResidentsTableViewCell.swift */; };
+		E2C573379F5FA0C8EB1BF9EE /* Pods_Kamino.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBC1B116B5363459F6B344FC /* Pods_Kamino.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +43,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		111E0E09FF531ED7A9A4D697 /* Pods-KaminoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KaminoUITests.debug.xcconfig"; path = "Target Support Files/Pods-KaminoUITests/Pods-KaminoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		20D4C999500772165BA3F70E /* Pods-KaminoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KaminoTests.release.xcconfig"; path = "Target Support Files/Pods-KaminoTests/Pods-KaminoTests.release.xcconfig"; sourceTree = "<group>"; };
+		22346E7968DF9D40B299440A /* Pods-KaminoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KaminoTests.debug.xcconfig"; path = "Target Support Files/Pods-KaminoTests/Pods-KaminoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2578D984E9CF9509F11E87B9 /* Pods-Kamino.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kamino.release.xcconfig"; path = "Target Support Files/Pods-Kamino/Pods-Kamino.release.xcconfig"; sourceTree = "<group>"; };
+		7B0E70EE2253936900B85BE7 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		7B0E70F022539FC500B85BE7 /* ResidentInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResidentInfoViewController.swift; sourceTree = "<group>"; };
+		7B0E70F22253A65700B85BE7 /* IBDesignables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBDesignables.swift; sourceTree = "<group>"; };
+		7B0E70F42253A70600B85BE7 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		7B2CA8AA225364730077C359 /* Kamino.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kamino.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B2CA8AD225364730077C359 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B2CA8AF225364730077C359 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +65,12 @@
 		7B2CA8CC225364750077C359 /* KaminoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KaminoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B2CA8D0225364750077C359 /* KaminoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaminoUITests.swift; sourceTree = "<group>"; };
 		7B2CA8D2225364750077C359 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B2CA8E2225376260077C359 /* ResidentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResidentsTableViewCell.swift; sourceTree = "<group>"; };
+		82E0F0EBA1AC4EB9B3FB5CA4 /* Pods_KaminoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KaminoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6D0BF043105A4FB9EE82771 /* Pods-KaminoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KaminoUITests.release.xcconfig"; path = "Target Support Files/Pods-KaminoUITests/Pods-KaminoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DBC1B116B5363459F6B344FC /* Pods_Kamino.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kamino.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5E8C5E72596764EFCC345BF /* Pods_KaminoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KaminoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC4617F8A6BF4051A1066B56 /* Pods-Kamino.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kamino.debug.xcconfig"; path = "Target Support Files/Pods-Kamino/Pods-Kamino.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2C573379F5FA0C8EB1BF9EE /* Pods_Kamino.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27C62785D9034088280AAC57 /* Pods_KaminoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +94,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06671A76A4B31AC2A547007D /* Pods_KaminoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09F7500390DEB02B56D740C7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FC4617F8A6BF4051A1066B56 /* Pods-Kamino.debug.xcconfig */,
+				2578D984E9CF9509F11E87B9 /* Pods-Kamino.release.xcconfig */,
+				22346E7968DF9D40B299440A /* Pods-KaminoTests.debug.xcconfig */,
+				20D4C999500772165BA3F70E /* Pods-KaminoTests.release.xcconfig */,
+				111E0E09FF531ED7A9A4D697 /* Pods-KaminoUITests.debug.xcconfig */,
+				B6D0BF043105A4FB9EE82771 /* Pods-KaminoUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		118E6175E66CAF206708ACE5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DBC1B116B5363459F6B344FC /* Pods_Kamino.framework */,
+				E5E8C5E72596764EFCC345BF /* Pods_KaminoTests.framework */,
+				82E0F0EBA1AC4EB9B3FB5CA4 /* Pods_KaminoUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7B2CA8A1225364730077C359 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +131,8 @@
 				7B2CA8C4225364750077C359 /* KaminoTests */,
 				7B2CA8CF225364750077C359 /* KaminoUITests */,
 				7B2CA8AB225364730077C359 /* Products */,
+				09F7500390DEB02B56D740C7 /* Pods */,
+				118E6175E66CAF206708ACE5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,8 +150,13 @@
 			isa = PBXGroup;
 			children = (
 				7B2CA8AD225364730077C359 /* AppDelegate.swift */,
-				7B2CA8AF225364730077C359 /* ViewController.swift */,
 				7B2CA8B1225364730077C359 /* Main.storyboard */,
+				7B0E70EE2253936900B85BE7 /* Services.swift */,
+				7B0E70F42253A70600B85BE7 /* Extensions.swift */,
+				7B0E70F22253A65700B85BE7 /* IBDesignables.swift */,
+				7B2CA8AF225364730077C359 /* ViewController.swift */,
+				7B2CA8E2225376260077C359 /* ResidentsTableViewCell.swift */,
+				7B0E70F022539FC500B85BE7 /* ResidentInfoViewController.swift */,
 				7B2CA8B7225364750077C359 /* Assets.xcassets */,
 				7B2CA8B9225364750077C359 /* LaunchScreen.storyboard */,
 				7B2CA8BC225364750077C359 /* Info.plist */,
@@ -135,9 +190,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7B2CA8D5225364750077C359 /* Build configuration list for PBXNativeTarget "Kamino" */;
 			buildPhases = (
+				54652209C554A8E82A2F8A0D /* [CP] Check Pods Manifest.lock */,
 				7B2CA8A6225364730077C359 /* Sources */,
 				7B2CA8A7225364730077C359 /* Frameworks */,
 				7B2CA8A8225364730077C359 /* Resources */,
+				24FB39B439DC82D302E74B0C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +209,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7B2CA8D8225364750077C359 /* Build configuration list for PBXNativeTarget "KaminoTests" */;
 			buildPhases = (
+				7277B7B52C2A2CC3F8BA8462 /* [CP] Check Pods Manifest.lock */,
 				7B2CA8BD225364750077C359 /* Sources */,
 				7B2CA8BE225364750077C359 /* Frameworks */,
 				7B2CA8BF225364750077C359 /* Resources */,
@@ -170,6 +228,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7B2CA8DB225364750077C359 /* Build configuration list for PBXNativeTarget "KaminoUITests" */;
 			buildPhases = (
+				899F85BFCFD28D7B5FDE0F74 /* [CP] Check Pods Manifest.lock */,
 				7B2CA8C8225364750077C359 /* Sources */,
 				7B2CA8C9225364750077C359 /* Frameworks */,
 				7B2CA8CA225364750077C359 /* Resources */,
@@ -254,14 +313,116 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		24FB39B439DC82D302E74B0C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kamino/Pods-Kamino-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Cache/Cache.framework",
+				"${BUILT_PRODUCTS_DIR}/Imaginary/Imaginary.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Lightbox/Lightbox.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Imaginary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lightbox.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kamino/Pods-Kamino-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		54652209C554A8E82A2F8A0D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Kamino-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7277B7B52C2A2CC3F8BA8462 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KaminoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		899F85BFCFD28D7B5FDE0F74 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KaminoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7B2CA8A6225364730077C359 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				7B2CA8B6225364730077C359 /* Kamino.xcdatamodeld in Sources */,
+				7B0E70EF2253936900B85BE7 /* Services.swift in Sources */,
+				7B0E70F122539FC500B85BE7 /* ResidentInfoViewController.swift in Sources */,
+				7B0E70F52253A70600B85BE7 /* Extensions.swift in Sources */,
 				7B2CA8B0225364730077C359 /* ViewController.swift in Sources */,
 				7B2CA8AE225364730077C359 /* AppDelegate.swift in Sources */,
+				7B2CA8E3225376260077C359 /* ResidentsTableViewCell.swift in Sources */,
+				7B0E70F32253A65700B85BE7 /* IBDesignables.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,11 +595,13 @@
 		};
 		7B2CA8D6225364750077C359 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC4617F8A6BF4051A1066B56 /* Pods-Kamino.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4NM48V535H;
 				INFOPLIST_FILE = Kamino/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -452,11 +615,13 @@
 		};
 		7B2CA8D7225364750077C359 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2578D984E9CF9509F11E87B9 /* Pods-Kamino.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4NM48V535H;
 				INFOPLIST_FILE = Kamino/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -470,6 +635,7 @@
 		};
 		7B2CA8D9225364750077C359 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22346E7968DF9D40B299440A /* Pods-KaminoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -491,6 +657,7 @@
 		};
 		7B2CA8DA225364750077C359 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20D4C999500772165BA3F70E /* Pods-KaminoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +679,7 @@
 		};
 		7B2CA8DC225364750077C359 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 111E0E09FF531ED7A9A4D697 /* Pods-KaminoUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +700,7 @@
 		};
 		7B2CA8DD225364750077C359 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6D0BF043105A4FB9EE82771 /* Pods-KaminoUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

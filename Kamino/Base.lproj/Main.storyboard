@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9hB-ai-WAa">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,184 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Kamino" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eeB-ns-0zi" userLabel="Planet Info View">
+                                <rect key="frame" x="0.0" y="88" width="414" height="206"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LPW-8c-2ch">
+                                        <rect key="frame" x="8" y="8" width="124" height="124"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="LPW-8c-2ch" secondAttribute="height" id="Jvq-QJ-B7w"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grt-4t-5Cc" customClass="UITextViewFixed" customModule="Kamino" customModuleProvider="target">
+                                        <rect key="frame" x="151.5" y="8" width="254.5" height="22"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pbk-Tn-a3h">
+                                        <rect key="frame" x="8" y="139.5" width="124" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="lqd-cS-Oxu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="16"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="planetLikeButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RpJ-ET-SAu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.95300596952438354" green="0.95677083730697632" blue="0.96078616380691528" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="grt-4t-5Cc" firstAttribute="top" secondItem="LPW-8c-2ch" secondAttribute="top" id="0RV-Io-tbh"/>
+                                    <constraint firstItem="LPW-8c-2ch" firstAttribute="leading" secondItem="eeB-ns-0zi" secondAttribute="leading" constant="8" id="3Ig-kn-lmK"/>
+                                    <constraint firstItem="Pbk-Tn-a3h" firstAttribute="trailing" secondItem="LPW-8c-2ch" secondAttribute="trailing" id="6Nl-ge-AAC"/>
+                                    <constraint firstAttribute="height" constant="206" id="B4r-sn-dwE"/>
+                                    <constraint firstItem="grt-4t-5Cc" firstAttribute="leading" secondItem="LPW-8c-2ch" secondAttribute="trailing" constant="19.5" id="CGn-5U-oC2"/>
+                                    <constraint firstItem="LPW-8c-2ch" firstAttribute="width" secondItem="eeB-ns-0zi" secondAttribute="width" multiplier="0.3" id="Hl1-2h-cNn"/>
+                                    <constraint firstItem="LPW-8c-2ch" firstAttribute="top" secondItem="eeB-ns-0zi" secondAttribute="top" constant="8" id="K9G-Ri-YbI"/>
+                                    <constraint firstItem="Pbk-Tn-a3h" firstAttribute="top" secondItem="LPW-8c-2ch" secondAttribute="bottom" constant="7.5" id="Oe3-E3-Mwv"/>
+                                    <constraint firstItem="Pbk-Tn-a3h" firstAttribute="leading" secondItem="LPW-8c-2ch" secondAttribute="leading" id="R89-uG-FFd"/>
+                                    <constraint firstAttribute="trailing" secondItem="grt-4t-5Cc" secondAttribute="trailing" constant="8" id="gcD-z0-RG2"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4ph-5K-Rbn">
+                                <rect key="frame" x="0.0" y="294" width="414" height="602"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Residents Cell" rowHeight="140" id="16Q-CD-eIp" customClass="ResidentsTableViewCell" customModule="Kamino" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="140"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="16Q-CD-eIp" id="PzR-bq-xDe">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="139.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPw-ED-YiP">
+                                                    <rect key="frame" x="16" y="0.0" width="360" height="139.5"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="VPw-ED-YiP" firstAttribute="top" secondItem="PzR-bq-xDe" secondAttribute="top" id="EIx-IB-H24"/>
+                                                <constraint firstAttribute="bottom" secondItem="VPw-ED-YiP" secondAttribute="bottom" id="mEA-Df-crV"/>
+                                                <constraint firstAttribute="trailing" secondItem="VPw-ED-YiP" secondAttribute="trailing" id="pmT-b0-GiF"/>
+                                                <constraint firstItem="VPw-ED-YiP" firstAttribute="leading" secondItem="PzR-bq-xDe" secondAttribute="leading" constant="16" id="xUt-nb-QQT"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="residentInfoLabel" destination="VPw-ED-YiP" id="y4d-gz-01H"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="B7c-eT-vLc"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Utf-eM-5dL"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98613516115320499" green="0.98960137086490374" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="4ph-5K-Rbn" firstAttribute="top" secondItem="eeB-ns-0zi" secondAttribute="bottom" id="1vR-Td-cVD"/>
+                            <constraint firstItem="eeB-ns-0zi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7K2-Hm-brS"/>
+                            <constraint firstItem="4ph-5K-Rbn" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="DUc-pD-RML"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4ph-5K-Rbn" secondAttribute="trailing" id="JLz-He-8hu"/>
+                            <constraint firstItem="4ph-5K-Rbn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Zm3-s4-Nw4"/>
+                            <constraint firstItem="eeB-ns-0zi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="oQN-kv-ZSh"/>
+                            <constraint firstItem="eeB-ns-0zi" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ymz-rQ-sw7"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="HIV-d1-ZBc"/>
+                    <connections>
+                        <outlet property="headerHeightConstraint" destination="B4r-sn-dwE" id="dW7-E2-U8l"/>
+                        <outlet property="headerTopConstraint" destination="oQN-kv-ZSh" id="Dhr-n4-VAJ"/>
+                        <outlet property="planetInfoTextView" destination="grt-4t-5Cc" id="UkV-ea-gYv"/>
+                        <outlet property="planetInfoView" destination="eeB-ns-0zi" id="0hq-kC-q0u"/>
+                        <outlet property="planetLikeButtonOutlet" destination="Pbk-Tn-a3h" id="Rim-Mf-Red"/>
+                        <outlet property="planetProfileImageView" destination="LPW-8c-2ch" id="opy-vw-sbv"/>
+                        <outlet property="residentsTableView" destination="4ph-5K-Rbn" id="gKk-7k-JUL"/>
+                        <segue destination="bv4-fQ-Jzr" kind="show" identifier="Resident Info Segue" id="4Y4-aS-Ct5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1957.9710144927537" y="137.94642857142856"/>
+        </scene>
+        <!--Resident Info View Controller-->
+        <scene sceneID="cbR-Kv-VP0">
+            <objects>
+                <viewController id="bv4-fQ-Jzr" customClass="ResidentInfoViewController" customModule="Kamino" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qZC-8Z-bc6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1C7-Cc-9WR">
+                                <rect key="frame" x="0.0" y="88" width="414" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="qny-vZ-Qtt"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pI-HC-o2P" customClass="UITextViewFixed" customModule="Kamino" customModuleProvider="target">
+                                <rect key="frame" x="20" y="296" width="374" height="566"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98443132638931274" green="0.98800784349441528" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="9pI-HC-o2P" firstAttribute="leading" secondItem="FqP-l4-rvO" secondAttribute="leading" constant="20" id="1RQ-NQ-gh6"/>
+                            <constraint firstItem="FqP-l4-rvO" firstAttribute="bottom" secondItem="9pI-HC-o2P" secondAttribute="bottom" id="7hE-X6-Zxf"/>
+                            <constraint firstItem="1C7-Cc-9WR" firstAttribute="leading" secondItem="FqP-l4-rvO" secondAttribute="leading" id="dpt-Xi-Myz"/>
+                            <constraint firstItem="FqP-l4-rvO" firstAttribute="trailing" secondItem="9pI-HC-o2P" secondAttribute="trailing" constant="20" id="kZU-eW-Ejk"/>
+                            <constraint firstItem="9pI-HC-o2P" firstAttribute="top" secondItem="1C7-Cc-9WR" secondAttribute="bottom" constant="8" id="mfN-Ib-42t"/>
+                            <constraint firstItem="FqP-l4-rvO" firstAttribute="trailing" secondItem="1C7-Cc-9WR" secondAttribute="trailing" id="rsr-hD-e0P"/>
+                            <constraint firstItem="1C7-Cc-9WR" firstAttribute="top" secondItem="FqP-l4-rvO" secondAttribute="top" id="ub1-XQ-2Tz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FqP-l4-rvO"/>
+                    </view>
+                    <connections>
+                        <outlet property="residentInfoProfileImageView" destination="1C7-Cc-9WR" id="g3X-fN-Vlb"/>
+                        <outlet property="residentInfoProfileImageViewConstraint" destination="qny-vZ-Qtt" id="CvK-wn-g6p"/>
+                        <outlet property="residentInfoTextView" destination="9pI-HC-o2P" id="h2p-Hg-9aK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nAs-xC-DQt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2730.434782608696" y="137.94642857142856"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="2tR-bj-p6y">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9hB-ai-WAa" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="PQC-VC-qka"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="an8-vD-hWV">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="gVu-Sr-QGV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FoS-y4-CRW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1168" y="138"/>
         </scene>
     </scenes>
 </document>
