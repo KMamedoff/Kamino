@@ -25,16 +25,19 @@ struct Planet: Decodable {
     let likes: Int
 }
 
-struct PostLikes: Codable {
-    let likes: Int
-    let planet_id: Int
+struct PostLikes : Decodable {
+    var planetId: Int
+    var likes: Int
+    
+    private enum CodingKeys : String, CodingKey {
+        case planetId = "planet_id", likes = "likes " // Did this because there is a typo in API. Instead of "likes" it has been entered as "likes ".
+    }
 }
 
 class ViewController: UIViewController, UIGestureRecognizerDelegate {
     
     @IBOutlet weak var headerTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
-    
     @IBOutlet weak var planetProfileImageView: UIImageView!
     @IBOutlet weak var planetInfoTextView: UITextView!
     @IBOutlet weak var planetInfoView: UIView!
@@ -42,7 +45,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var residentsTableView: UITableView!
 
     var homeFeedPlanet: Planet?
-    var likeButtonToggle = false
+    var residentNames = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,9 +54,8 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         mytapGestureRecognizer.numberOfTapsRequired = 1
         planetProfileImageView.addGestureRecognizer(mytapGestureRecognizer)
         
-        
         let planetUrlString = "https://private-bef1e9-starwars2.apiary-mock.com/planets/10"
-        Service.shared.fetchGenericData(urlString: planetUrlString) { (feed: Planet) in
+        Service.shared.getRequest(urlString: planetUrlString) { (feed: Planet) in
             self.homeFeedPlanet = feed
             
             guard let planetName = self.homeFeedPlanet?.name else { return }
@@ -73,15 +75,14 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
                 switch result {
                 case .success(let value):
                     print(value)
-                    
                 case .failure(let error):
                     print(error)
-                    
                     self.planetProfileImageView.image = UIImage(named: "No Image")
                 }
             }
             
             self.title = "\(planetName) - Planet"
+            self.planetLikeButtonOutlet.isEnabled = true
             self.planetLikeButtonOutlet.setTitle("👍🏻 Like (\(planetLikes))", for: .normal)
             self.planetInfoTextView.text = """
             Rotation period: \(planetRotationPeriod)
@@ -93,6 +94,15 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
             Surface Water: \(planetSurfaceWater)
             Population: \(planetPopulation)
             """
+            
+            /*
+            // NOT POSSIBLE TO GET RESIDENT NAMES WITHOUT TOO MUCH API REQUESTS AT ONCE
+            self.homeFeedPlanet?.residents.forEach {
+                Service.shared.getRequest(urlString: $0) { (feed: Resident) in
+                    self.residentNames.append(feed.name)
+                }
+            }
+            */
             
             let contentSize = self.planetInfoTextView.sizeThatFits(self.planetInfoTextView.bounds.size)
             self.headerHeightConstraint.constant = contentSize.height + 16
@@ -116,21 +126,20 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     @IBAction func planetLikeButtonAction(_ sender: UIButton) {
-        likeButtonToggle.toggle()
-        
-        guard let planetLikes = self.homeFeedPlanet?.likes else { return }
-        
-        if likeButtonToggle {
-            self.planetLikeButtonOutlet.setTitle("👍🏻 Like (\(planetLikes + 1))", for: .normal)
-            self.planetLikeButtonOutlet.setTitleColor(UIColor.blue, for: .normal)
-        } else {
-            self.planetLikeButtonOutlet.setTitle("👍🏻 Like (\(planetLikes))", for: .normal)
-            self.planetLikeButtonOutlet.setTitleColor(UIColor.darkGray, for: .normal)
+        let likeUrlString = "https://private-bef1e9-starwars2.apiary-mock.com/planets/10/like"
+        Service.shared.postRequest(urlString: likeUrlString, body: "{\n  \"planet_id\": 10\n}", value: [["application/json", "Content-Type"]]) { (feed: PostLikes) in
+            
+            if let buttonTitle = self.planetLikeButtonOutlet.titleLabel?.text {
+                if buttonTitle.contains(String(feed.likes)) {
+                    self.planetLikeButtonOutlet.setTitle("👍🏻 Like (\(feed.likes + 1))", for: .normal)
+                    self.planetLikeButtonOutlet.setTitleColor(UIColor.blue, for: .normal)
+                } else {
+                    self.planetLikeButtonOutlet.setTitle("👍🏻 Like (\(feed.likes))", for: .normal)
+                    self.planetLikeButtonOutlet.setTitleColor(UIColor.darkGray, for: .normal)
+                }
+            }
         }
-
-        // IMPORTANT: THERE IS NO SECRET KEY TO MAKE A POST REQUEST
     }
-    
     
     @objc func imageTapAction(recognizer: UITapGestureRecognizer) {
         guard let planetName = self.homeFeedPlanet?.name else { return }

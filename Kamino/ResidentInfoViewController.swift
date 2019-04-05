@@ -25,7 +25,6 @@ struct Resident: Decodable {
 class ResidentInfoViewController: UIViewController {
     
     @IBOutlet weak var residentInfoProfileImageViewConstraint: NSLayoutConstraint!
-    
     @IBOutlet weak var residentInfoProfileImageView: UIImageView!
     @IBOutlet weak var residentInfoTextView: UITextView!
     
@@ -37,7 +36,7 @@ class ResidentInfoViewController: UIViewController {
         super.viewDidLoad()
         
         guard let residentUrlString = residentUrl else { return }
-        Service.shared.fetchGenericData(urlString: residentUrlString) { (feed: Resident) in
+        Service.shared.getRequest(urlString: residentUrlString) { (feed: Resident) in
             self.homeFeedResident = feed
             
             guard let residentName = self.homeFeedResident?.name else { return }
@@ -47,13 +46,9 @@ class ResidentInfoViewController: UIViewController {
             guard let residentEyeColor = self.homeFeedResident?.eyeColor else { return }
             guard let residentBirthYear = self.homeFeedResident?.birthYear else { return }
             guard let residentGender = self.homeFeedResident?.gender else { return }
-//            guard let residentHomeworld = self.homeFeedResident?.homeworld else { return }
             guard let residentImageUrl = self.homeFeedResident?.imageUrl else { return }
             guard let planetName = self.homeworldName else { return }
             
-            print(residentImageUrl)
-            print(planetName)
-
             self.residentInfoProfileImageView.kf.indicatorType = .activity
             self.residentInfoProfileImageView.kf.setImage(with: residentImageUrl) { result in
                 switch result {
